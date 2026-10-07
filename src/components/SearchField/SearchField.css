@@ -1,0 +1,30 @@
+.search-field {
+  position: relative;
+  border: 1px solid rgba(226,232,240,.5);
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  transition: all .2s;
+}
+.search-field:focus-within { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,.2); }
+.search-field__icon {
+  position: absolute; top: 0; bottom: 0; left: 1rem;
+  display: flex; align-items: center; pointer-events: none; color: #2563eb;
+}
+.search-field__icon--dim svg { opacity: .5; }
+.search-field__body { padding: .875rem 1rem .875rem 3rem; }
+.search-field--compact .search-field__body { padding: .875rem .5rem .875rem 2.5rem; }
+.search-field__label {
+  display: block; font-size: 10px; font-weight: 900; color: #64748b;
+  text-transform: uppercase; letter-spacing: .1em; margin-bottom: 2px;
+}
+.search-field__input {
+  width: 100%; background: transparent; border: none; outline: none; padding: 0;
+  color: #0f172a; font-weight: 900; font-size: 1rem;
+}
+.search-field__input::placeholder { color: #94a3b8; }
+.search-field__input--date { font-weight: 700; font-size: .875rem; cursor: pointer; }
+@media (min-width: 768px) {
+  .search-field__input { font-size: 1.125rem; }
+  .search-field__input--date { font-size: 1rem; }
+}

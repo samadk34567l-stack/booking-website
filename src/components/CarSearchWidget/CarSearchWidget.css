@@ -1,0 +1,18 @@
+.car-widget { display: grid; grid-template-columns: 1fr; gap: .75rem; position: relative; animation: slideUp .5s ease both; }
+.car-widget__dates { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.car-widget__btn {
+  width: 100%; height: 100%; min-height: 76px;
+  background: linear-gradient(135deg,#2563eb,#4f46e5); color: #fff; border-radius: 1rem;
+  font-weight: 900; font-size: 1.125rem; display: flex; align-items: center; justify-content: center; gap: .5rem;
+  box-shadow: 0 10px 15px -3px rgba(37,99,235,.3); transition: all .2s;
+}
+.car-widget__btn:hover { background: linear-gradient(135deg,#1d4ed8,#4338ca); }
+.car-widget__btn:active { transform: scale(.97); }
+@media (min-width: 1024px) {
+  .car-widget { grid-template-columns: repeat(12, 1fr); }
+  .car-widget__pickup, .car-widget__dropoff { grid-column: span 3; }
+  .car-widget__dates { grid-column: span 4; }
+  .car-widget__action { grid-column: span 2; }
+  .car-widget__btn span { display: none; }
+}
+@media (min-width: 1280px) { .car-widget__btn span { display: inline; } }
